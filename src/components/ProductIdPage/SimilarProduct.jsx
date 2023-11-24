@@ -14,8 +14,6 @@ const SimilarProduct = ({ categoryId, idProduct }) => {
         }
     }, [categoryId])
 
-    console.log(productByCategory);
-
 
     return (
         <article>

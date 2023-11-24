@@ -2,8 +2,6 @@ import { useNavigate } from 'react-router-dom'
 
 const ProductCard = ({ product }) => {
 
-    console.log(product);
-
     const navigate = useNavigate()
 
     const handleNavegate = () => {
