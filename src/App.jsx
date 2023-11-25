@@ -18,6 +18,9 @@ function App() {
         <Route path='/register' element={<RegisterPage />} />
         <Route path='/login' element={<LoginPage />} />
       </Routes>
+      <div className='app__copy'>
+        <p className='app__p'>create for Wilfren Quintero</p>
+      </div>
     </div>
   )
 }
