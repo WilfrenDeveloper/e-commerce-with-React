@@ -1,40 +1,39 @@
 import { useForm } from "react-hook-form"
 import useAuth from "../../hooks/useAuth"
+import '../../style/FormRegister.css'
 
 const FormRegister = () => {
 
-    const { register, handleSubmit, reset } = useForm()
-    const { registerUser } = useAuth()
+    const { register, handleSubmit, reset } = useForm();
+    const { registerUser } = useAuth();
 
-    const submit = () =>{
-    
+    const submit = (data) =>{
+        registerUser(data);
     }
 
     return (
         <form onSubmit={handleSubmit(submit)}>
-            <label htmlFor="">
+            <label className="formregister__label">
                 <span>First Name</span>
-                <input {...register('firstname')} type="text" />
-            </label><label htmlFor="">
+                <input {...register('firstName')} type="text" />
+            </label>
+            <label className="formregister__label">
                 <span>Last Name</span>
-                <input {...register('lastname')} type="text" />
+                <input {...register('lastName')} type="text" />
             </label>
-            <label htmlFor="">
+            <label className="formregister__label">
                 <span>Email</span>
-                <input {...register('email')} type="text" />
+                <input {...register('email')} type="email" />
             </label>
-            <label htmlFor="">
+            <label className="formregister__label">
                 <span>Password</span>
                 <input {...register('password')} type="password" />
             </label>
-            <label htmlFor="">
+            <label className="formregister__label">
                 <span>Phone</span>
                 <input {...register('phone')} type="number" />
             </label>
-            <label htmlFor="">
-                <span>Register</span>
-                <input {...register('')} type="text" />
-            </label>
+            <button>Register</button>
 
         </form>
     )
