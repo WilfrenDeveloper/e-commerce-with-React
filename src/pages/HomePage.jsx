@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux'
 import ProductCard from '../components/HomePage/ProductCard'
 import FilterCategory from '../components/HomePage/FilterCategory'
 import FilterPrice from '../components/HomePage/FilterPrice'
+import '../style/HomePage.css'
 
 const HomePage = () => {
 
@@ -41,10 +42,10 @@ const HomePage = () => {
   console.log(priceRange);
 
   return (
-    <div>
-      <input onChange={handleInputName} type="text" ref={inputValue} />
-      <div>
-        <h2>Filter category</h2>
+    <div className='homepage__container'>
+      
+      <div className='homepage__div--category'>
+        <h2 className='homepage__h2'>Filter category</h2>
         <FilterPrice 
           setPriceRange = {setPriceRange}
         />
@@ -52,7 +53,8 @@ const HomePage = () => {
           setCategorySelected={setCategorySelected}
         />
       </div>
-      <div>
+      <input className='homepage__search' onChange={handleInputName} type="text" ref={inputValue} placeholder='What are you looking for?' />
+      <div className='homepage__div--card'>
         {
           products?.filter(callbackFilter).map(prod => (
             <ProductCard

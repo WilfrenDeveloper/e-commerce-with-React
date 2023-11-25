@@ -37,7 +37,7 @@ const ProductInfo = ({ product }) => {
             </div>
             <button onClick={addToCart}>
                 <span>Add to Cart</span>
-                <span><i className='bx bxs-cart'></i></span>
+                <span><i className='bx bx-cart'></i></span>
             </button>
         </footer>
     </article>

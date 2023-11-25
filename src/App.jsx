@@ -5,12 +5,13 @@ import HomePage from './pages/HomePage'
 import ProductIdPage from './pages/ProductIdPage'
 import RegisterPage from './pages/registerPage'
 import LoginPage from './pages/LoginPage'
+import Nav from './components/Nav'
 
 function App() {
 
   return (
     <div>
-      <h1>e-commerce</h1>
+      <Nav/>
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/product/:id' element={<ProductIdPage />} />
