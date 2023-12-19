@@ -8,20 +8,21 @@ import LoginPage from './pages/LoginPage'
 import Nav from './components/Nav'
 import CartPage from './pages/CartPage'
 import ProtectedRoutes from './pages/ProtectedRoutes'
+import PurchasesPage from './pages/PurchasesPage'
 
 function App() {
 
   return (
     <div>
-      <Nav/>
+      <Nav />
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/product/:id' element={<ProductIdPage />} />
         <Route path='/register' element={<RegisterPage />} />
         <Route path='/login' element={<LoginPage />} />
-        
         <Route element={<ProtectedRoutes />}>
-        <Route path='/cart' element={<CartPage />} />
+          <Route path='/cart' element={<CartPage />} />
+          <Route path='/purchases' element={<PurchasesPage />} />
         </Route>
       </Routes>
       <div className='app__copy'>
