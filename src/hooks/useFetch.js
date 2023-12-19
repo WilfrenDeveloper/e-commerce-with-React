@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 const useFetch = () => {
     const [infoApi, setInfoApi] = useState()
@@ -9,9 +9,6 @@ const useFetch = () => {
             .then(res => setInfoApi(res.data))
             .catch(error => console.log(error))
     }
-
-
-
 
     return [infoApi, getAPi]
 }

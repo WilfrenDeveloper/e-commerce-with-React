@@ -6,6 +6,8 @@ import ProductIdPage from './pages/ProductIdPage'
 import RegisterPage from './pages/RegisterPage'
 import LoginPage from './pages/LoginPage'
 import Nav from './components/Nav'
+import CartPage from './pages/CartPage'
+import ProtectedRoutes from './pages/ProtectedRoutes'
 
 function App() {
 
@@ -17,6 +19,10 @@ function App() {
         <Route path='/product/:id' element={<ProductIdPage />} />
         <Route path='/register' element={<RegisterPage />} />
         <Route path='/login' element={<LoginPage />} />
+        
+        <Route element={<ProtectedRoutes />}>
+        <Route path='/cart' element={<CartPage />} />
+        </Route>
       </Routes>
       <div className='app__copy'>
         <p className='app__p'>create for Wilfren Quintero</p>

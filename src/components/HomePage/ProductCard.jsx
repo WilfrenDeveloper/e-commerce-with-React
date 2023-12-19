@@ -1,14 +1,21 @@
 import { useNavigate } from 'react-router-dom'
 import '../../style/ProductCard.css'
+import { addProductToCartThunk } from '../../store/slices/cart.slice'
+import { useDispatch } from 'react-redux'
 
 const ProductCard = ({ product }) => {
 
     const navigate = useNavigate()
+    const dispatch = useDispatch()
 
     const handleNavegate = () => {
         navigate(`/product/${product.id}`)
     }
 
+    const handleAddCart = (e) => {
+        e.stopPropagation()
+        dispatch(addProductToCartThunk(product.id, 1))
+    }
 
     return (
         <article className='productcard__article' onClick={handleNavegate}>
@@ -22,7 +29,8 @@ const ProductCard = ({ product }) => {
                     <span className='productcard__span productcard__span--label'>Price</span>
                     <span className='productcard__span productcard__span--value'>{product.price}</span>
                 </div>
-                <button className='productcard__button'><i className='bx bx-cart productcard__bx'></i>
+                <button className='productcard__button' onClick={handleAddCart}>
+                    <i className='bx bx-cart productcard__bx'></i>
                 </button>
             </section>
         </article>

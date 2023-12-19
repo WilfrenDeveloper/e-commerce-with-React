@@ -39,8 +39,6 @@ const HomePage = () => {
     return filterName && filterCategory && filterPrice;
   }
 
-  console.log(priceRange);
-
   return (
     <div className='homepage__container'>
       

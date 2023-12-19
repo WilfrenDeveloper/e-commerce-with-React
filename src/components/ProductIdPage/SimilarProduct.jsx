@@ -6,11 +6,10 @@ const SimilarProduct = ({ categoryId, idProduct }) => {
 
     const [productByCategory, getProductByCategory] = useFetch()
 
-    const url = `https://e-commerce-api-v2.academlo.tech/api/v1/products?categoryId=${categoryId}`
-
     useEffect(() => {
-        if (categoryId) {
-            getProductByCategory(url)
+     if (categoryId) {
+            const url = `https://e-commerce-api-v2.academlo.tech/api/v1/products?categoryId=${categoryId}`;
+            getProductByCategory(url);
         }
     }, [categoryId])
 
