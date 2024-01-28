@@ -10,7 +10,7 @@ import '../style/HomePage.css'
 const HomePage = () => {
 
   const products = useSelector(store => store.products)
-  const [nameValue, setNameValue] = useState(" ")
+  const [nameValue, setNameValue] = useState("")
   const [categorySelected, setCategorySelected] = useState('all')
   const [priceRange, setPriceRange] = useState({
     from:0,

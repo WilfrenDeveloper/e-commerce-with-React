@@ -5,7 +5,7 @@ import useFetch from '../../hooks/useFetch'
 const FilterCategory = ({ setCategorySelected }) => {
     const [categories, getCategories] = useFetch()
 
-    const url = "https://e-commerce-api-v2.academlo.tech/api/v1/categories"
+    const url = "http://localhost:8080/categories"
 
     useEffect(() => {
       getCategories(url)

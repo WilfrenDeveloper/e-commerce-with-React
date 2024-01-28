@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import { getCartThunk, setCart } from '../store/slices/cart.slice'
 import CartProduct from '../components/CartPage/CartProduct'
 import getTokenConfig from '../utils/getTokenConfig'
+import axios from 'axios'
 
 const CartPage = () => {
 
@@ -14,12 +15,13 @@ const CartPage = () => {
     dispatch(getCartThunk())
   }, [])
   
-  const totalPriceCart = cart.reduce((acc,cv) => {
-    return acc + cv.product.price * cv.quantity
+  const totalPriceCart = cart.reduce(( acc, cv ) => {
+    const price = Number(cv.product.price);
+    return acc + price * cv.quantity
   }, 0)
 
   const handlePurchase = () => {
-    const url = 'https://e-commerce-api-v2.academlo.tech/api/v1/purchases'
+    const url = 'http://localhost:8080/purchases'
     axios.post(url, '', getTokenConfig())
     .then(res =>{
       console.log(res.data)
@@ -27,6 +29,7 @@ const CartPage = () => {
     })
     .catch(err => console.log(err))
   }
+
 
   return (
     <div>

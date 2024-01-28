@@ -12,7 +12,7 @@ const ProductIdPage = () => {
 
   
   useEffect(() => {
-    const url = `https://e-commerce-api-v2.academlo.tech/api/v1/products/${id}`
+    const url = `http://localhost:8080/products/${id}`
 
     getProduct(url);
   }, [id])
@@ -24,7 +24,7 @@ const ProductIdPage = () => {
         product = {product}
       />
       <SimilarProduct 
-        categoryId = {product?.category.id}
+        categoryId = {product?.category?.id}
         idProduct = {product?.id}
       />
     </div>

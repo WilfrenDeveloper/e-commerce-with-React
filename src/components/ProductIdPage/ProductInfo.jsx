@@ -18,7 +18,7 @@ const ProductInfo = ({ product }) => {
         }
     }
 
-    const addToCart = () => {
+    const handleAddToCart = () => {
         dispatch(addProductToCartThunk(product.id, quantity))
     }
 
@@ -27,6 +27,7 @@ const ProductInfo = ({ product }) => {
             <h3>{product?.brand}</h3>
             <h2>{product?.title}</h2>
             <p>{product?.description}</p>
+            <img src={product?.images[0].url} alt="" />
             <footer>
                 <div>
                     <span>Price</span>
@@ -37,7 +38,7 @@ const ProductInfo = ({ product }) => {
                     <span>{quantity}</span>
                     <button onClick={handlePlus}>+</button>
                 </div>
-                <button onClick={addToCart}>
+                <button onClick={handleAddToCart}>
                     <span>Add to Cart</span>
                     <span><i className='bx bx-cart'></i></span>
                 </button>

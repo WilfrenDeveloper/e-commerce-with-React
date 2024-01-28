@@ -2,7 +2,7 @@ import React from 'react'
 import { deleteProductFromCartThunk } from '../../store/slices/cart.slice'
 import { useDispatch } from 'react-redux'
 
-const CartProduct = ( prod ) => {
+const CartProduct = ({ prod }) => {
 
     const dispatch = useDispatch()
 
@@ -24,7 +24,7 @@ const CartProduct = ( prod ) => {
             </div>
         </article>
         <button onClick={handleDelete}>
-            <i class='bx bx-trash'></i>
+            <i className='bx bx-trash'></i>
         </button>
     </section>
   )

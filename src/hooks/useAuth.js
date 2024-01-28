@@ -3,14 +3,14 @@ import axios from "axios"
 const useAuth = () => {
 
     const registerUser = (user) => {
-        const url = 'https://e-commerce-api-v2.academlo.tech/api/v1/users';
+        const url = 'http://localhost:8080/users';
         axios.post(url, user)
         .then(res => console.log(res.data))
         .catch(error => console.log(error))
     }
 
     const loginUser = (credentials) => {
-        const url = 'https://e-commerce-api-v2.academlo.tech/api/v1/users/login';
+        const url = 'http://localhost:8080/users/login';
         axios.post(url, credentials)
         .then(res => {
             console.log(res.data)

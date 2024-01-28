@@ -20,7 +20,7 @@ const ProductCard = ({ product }) => {
     return (
         <article className='productcard__article' onClick={handleNavegate}>
             <header className='productcard__header'>
-                <img className='productcard__img' src={product.images[0].url} alt="" />
+                <img className='productcard__img' src={product.images[0]?.url} alt="" />
             </header>
             <section className='productcard__section'>
                 <h4 className='productcard__h4'>{product.brand}</h4>
