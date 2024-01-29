@@ -19,7 +19,7 @@ const ProductIdPage = () => {
   
 
   return (
-    <div>
+    <div >
       <ProductInfo 
         product = {product}
       />

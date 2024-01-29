@@ -9,7 +9,7 @@
     --gray: #c7c7c7;
     --dark-gray: #4f4f4f;
     --text-gray: #ababab;
-    --White: white;
+    --white: white;
     --padding: 2vw;
  }
 
@@ -24,4 +24,9 @@
 
  input, button{
    font-family: inherit;
+ }
+
+ input{
+   padding-left: 7px;
+   padding-right: 7px;
  }

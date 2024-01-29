@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { addProductToCartThunk } from "../../store/slices/cart.slice"
 import { useDispatch } from "react-redux"
+import SliderImgs from "./SliderImgs"
 
 
 const ProductInfo = ({ product }) => {
@@ -27,7 +28,9 @@ const ProductInfo = ({ product }) => {
             <h3>{product?.brand}</h3>
             <h2>{product?.title}</h2>
             <p>{product?.description}</p>
-            <img src={product?.images[0].url} alt="" />
+            <SliderImgs
+                product = { product }
+            />
             <footer>
                 <div>
                     <span>Price</span>
