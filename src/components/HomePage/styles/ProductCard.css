@@ -10,10 +10,21 @@
     align-items: center;
     padding: 40px;
     border-bottom: 1px solid var(--light-gray);
+    position: relative;
+    height: 200px;
 }
 
 .productcard__img {
-    height: 150px;
+    height: 180px;
+    width: 280px;
+    background-color: #fff;
+    position: absolute;
+    object-fit: contain;
+    transition: opacity 0.3s;
+}
+
+.product_img-2:hover{
+    opacity: 0;
 }
 
 .productcard__section {
