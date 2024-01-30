@@ -5,7 +5,7 @@
     font-family: 'Yantramanav', sans-serif;
 
     --primary: #f85555;
-    --light-gray: #dcd9d9;
+    --light-gray: #f7f7f7;
     --gray: #c7c7c7;
     --dark-gray: #4f4f4f;
     --text-gray: #ababab;
@@ -27,6 +27,7 @@
  }
 
  input{
-   padding-left: 7px;
-   padding-right: 7px;
+   padding: 7px;
+   border: var(--gray) solid 1px;
+   border-radius: 2px;
  }

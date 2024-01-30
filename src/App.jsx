@@ -13,7 +13,7 @@ import PurchasesPage from './pages/PurchasesPage'
 function App() {
 
   return (
-    <div>
+    <div className='app'>
       <Nav />
       <Routes>
         <Route path='/' element={<HomePage />} />

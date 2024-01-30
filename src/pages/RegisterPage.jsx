@@ -1,9 +1,15 @@
-import React from 'react'
+
 import FormRegister from '../components/RegisterPage/FormRegister'
+
+const style = {
+  display: "flex",
+  justifyContent: "center",
+  alingItems: "center"
+}
 
 const RegisterPage = () => {
   return (
-    <div>
+    <div style={style}>
       <FormRegister />
     </div>
   )

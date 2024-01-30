@@ -1,9 +1,16 @@
-import React from 'react'
+
 import FormLogin from '../components/LoginPage.jsx/FormLogin'
 
 const LoginPage = () => {
+
+  const style = {
+    display: "flex",
+    justifyContent: "center",
+    alingItems: "center"
+  }
+
   return (
-    <div>
+    <div style={style}>
       <FormLogin />
     </div>
   )

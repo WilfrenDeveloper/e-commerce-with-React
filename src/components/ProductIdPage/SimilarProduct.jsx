@@ -15,8 +15,7 @@ const SimilarProduct = ({ categoryId, idProduct }) => {
 
 
     return (
-        <article>
-            <h2>similar products</h2>
+        <article style={{display: "flex", flexWrap:"wrap", justifyContent:"center", gap: "20px"}}>
             {
                 productByCategory?.
                 filter(prod => prod.id !== idProduct)

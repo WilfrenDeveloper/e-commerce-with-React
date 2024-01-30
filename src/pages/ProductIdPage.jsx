@@ -19,15 +19,16 @@ const ProductIdPage = () => {
   
 
   return (
-    <div >
+    <section className='productidpage' style={{marginLeft: "100px", marginRight: "100px"}}>
       <ProductInfo 
         product = {product}
       />
+      <h2>Similar products</h2>
       <SimilarProduct 
         categoryId = {product?.category?.id}
         idProduct = {product?.id}
       />
-    </div>
+    </section>
   )
 }
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import './styles/CartProduct.css'
 import { deleteProductFromCartThunk } from '../../store/slices/cart.slice'
 import { useDispatch } from 'react-redux'
 
@@ -11,21 +11,22 @@ const CartProduct = ({ prod }) => {
     }
 
   return (
-    <section>
-        <header>
-            <img src={prod.product.images[0].url} alt="" />
+    <section className='cartproduct'>
+        <header className='cartproduct__header'>
+            <img className='cartproduct__img' src={prod.product.images[0].url} alt="" />
         </header>
-        <article>
-            <h3>{prod.product.title}</h3>
-            <span>{prod.quantity}</span>
-            <div>
-                <span>Price</span>
-                <span>{prod.product.price}</span>
+        <article className='cartproduct__article'>
+            <h3 className='cartproduct__h3'>{prod.product.title}</h3>
+            <span className='cartproduct__quantity'>Quantity: {prod.quantity}</span>
+            <div className='cartproduct__container'>
+                <span className='cartproduct__price--label'>Price</span>
+                <span className='cartproduct__price--value'>{prod.product.price}</span>
             </div>
-        </article>
-        <button onClick={handleDelete}>
+            <button className='cartproduct__btn' onClick={handleDelete}>
             <i className='bx bx-trash'></i>
-        </button>
+            </button>
+        </article>
+        
     </section>
   )
 }

@@ -17,7 +17,7 @@
 .productcard__img {
     height: 180px;
     width: 280px;
-    background-color: #fff;
+    background-color: var(--white);
     position: absolute;
     object-fit: contain;
     transition: opacity 0.3s;

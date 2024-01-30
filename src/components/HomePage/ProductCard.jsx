@@ -27,8 +27,8 @@ const ProductCard = ({ product }) => {
                 <h4 className='productcard__h4'>{product.brand}</h4>
                 <h3 className='productcard__h3'>{product.title}</h3>
                 <div className='productcard__div'>
-                    <span className='productcard__span productcard__value--label'>Price</span>
-                    <span className='productcard__span productcard__value--value'>{product.price}</span>
+                    <span className='productcard__span productcard__span--label'>Price</span>
+                    <span className='productcard__span productcard__span--value'>{product.price}</span>
                 </div>
                 <button className='productcard__button' onClick={handleAddCart}>
                     <i className='bx bx-cart productcard__bx'></i>
