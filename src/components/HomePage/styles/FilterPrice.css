@@ -1,0 +1,25 @@
+
+
+.filterprice{
+    font-size: 18px;
+    color: var(--dark-gray);
+    margin-top: 15px;
+}
+
+.filterprice__label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.filterprice__btn{
+    font-size: 18px;
+    color: var(--white);
+    background-color: var(--primary);
+    border: none;
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    position: relative;
+}

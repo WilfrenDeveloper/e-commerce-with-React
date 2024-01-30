@@ -1,4 +1,5 @@
 import { useForm } from 'react-hook-form'
+import './styles/FilterPrice.css'
 
 const FilterPrice = ({ setPriceRange }) => {
 
@@ -20,16 +21,18 @@ const FilterPrice = ({ setPriceRange }) => {
     }
 
   return (
-    <form onSubmit={handleSubmit(submit)}>
-        <label >
-            <span></span>
-            <input {...register('from')} type="number" />
+    <form className='filterprice' onSubmit={handleSubmit(submit)}>
+        <h3 className='filterprice__h3'>Price</h3>
+        <hr />
+        <label className='filterprice__label'>
+            <span>From</span>
+            <input className='filterprice__input' {...register('from')} type="number" />
         </label>
-        <label >
-            <span></span>
-            <input {...register('to')} type="number" />
+        <label className='filterprice__label'>
+            <span>to</span>
+            <input className='filterprice__input' {...register('to')} type="number" />
         </label>
-        <button>Filter</button>
+        <button className='filterprice__btn'>Filter Price</button>
     </form>
   )
 }

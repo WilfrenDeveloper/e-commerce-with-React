@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux'
-import '../style/CartPage.css'
+import '../components/CartPage/styles/CartPage.css'
 import { useEffect } from 'react'
 import { getCartThunk, setCart } from '../store/slices/cart.slice'
 import CartProduct from '../components/CartPage/CartProduct'
@@ -14,8 +14,8 @@ const CartPage = () => {
   useEffect(() => {
     dispatch(getCartThunk())
   }, [])
-  
-  const totalPriceCart = cart.reduce(( acc, cv ) => {
+
+  const totalPriceCart = cart.reduce((acc, cv) => {
     const price = Number(cv.product.price);
     return acc + price * cv.quantity
   }, 0)
@@ -23,34 +23,34 @@ const CartPage = () => {
   const handlePurchase = () => {
     const url = 'http://localhost:8080/purchases'
     axios.post(url, '', getTokenConfig())
-    .then(res =>{
-      console.log(res.data)
-      dispatch(setCart([]))
-    })
-    .catch(err => console.log(err))
+      .then(res => {
+        console.log(res.data)
+        dispatch(setCart([]))
+      })
+      .catch(err => console.log(err))
   }
 
 
   return (
-    <div>
-      <h1>Cart</h1>
-      <div>
+    <section className='cartpage'>
+      <header className='cartpage__header'>
+        <h1 className='cartpage__h1'>Cart</h1>
+        <p className='cartpage__p'>Total: <span>{totalPriceCart}</span></p>
+        
+        <button className='cartpage__btn' onClick={handlePurchase}>CheckOut</button>
+      </header>
+      <article className='cartpage__productcart'>
         {
-          cart.map(prod=>(
-            <CartProduct 
-              key = {prod.id}
-              prod = {prod}
+          cart.map(prod => (
+            <CartProduct
+              key={prod.id}
+              prod={prod}
             />
           ))
         }
-      </div>
-    <hr />
-    <footer>
-      <span>Total: </span>
-      <span>{totalPriceCart}</span>
-      <button onClick={handlePurchase}>CheckOut</button>
-    </footer> 
-    </div>
+      </article>
+      <hr />
+    </section>
   )
 }
 

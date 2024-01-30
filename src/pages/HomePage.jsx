@@ -51,7 +51,9 @@ const HomePage = () => {
           setCategorySelected={setCategorySelected}
         />
       </div>
-      <input className='homepage__search' onChange={handleInputName} type="text" ref={inputValue} placeholder='What are you looking for?' />
+      <div className='homepage__search'>
+        <input onChange={handleInputName} type="text" ref={inputValue} placeholder='What are you looking for?' />
+      </div>
       <div className='homepage__div--card'>
         {
           products?.filter(callbackFilter).map(prod => (

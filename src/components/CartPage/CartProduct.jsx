@@ -17,13 +17,10 @@ const CartProduct = ({ prod }) => {
         </header>
         <article className='cartproduct__article'>
             <h3 className='cartproduct__h3'>{prod.product.title}</h3>
-            <span className='cartproduct__quantity'>Quantity: {prod.quantity}</span>
-            <div className='cartproduct__container'>
-                <span className='cartproduct__price--label'>Price</span>
-                <span className='cartproduct__price--value'>{prod.product.price}</span>
-            </div>
+            <p className='cartproduct__quantity'>Quantity: <span>{prod.quantity}</span></p>
+            <p className='cartproduct__price'>Price: <span>{prod.product.price}</span></p>
             <button className='cartproduct__btn' onClick={handleDelete}>
-            <i className='bx bx-trash'></i>
+                <i className='bx bx-trash'></i>
             </button>
         </article>
         

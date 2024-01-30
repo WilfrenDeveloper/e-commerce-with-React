@@ -1,0 +1,38 @@
+.purchases{
+    height: 100px;
+    width: 450px;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    color: var(--dark-gray);
+}
+
+.purchases__header{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.purchases__img{
+    width: 100px;
+}
+
+.purchases__h3{
+    width: 240px;
+}
+
+.purchases__span{
+    padding: 5px 15px;
+    border: 1px solid var(--gray);
+}
+
+.purchases__price{
+    padding: 5px 15px;
+}
+
+.purchases__price::before{
+    content: "$";    
+}

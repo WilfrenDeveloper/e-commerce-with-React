@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import useFetch from '../../hooks/useFetch'
+import './styles/FilterCategory.css'
 
 
 const FilterCategory = ({ setCategorySelected }) => {
@@ -18,14 +19,14 @@ const FilterCategory = ({ setCategorySelected }) => {
     
 
   return (
-    <section>
-        <h3>Categories</h3>
+    <section className="filtercategory">
+        <h3 className="filtercategory__h3">Category</h3>
         <hr />
-        <ul>
-            <li onClick={() => handleCategory('all')}>All Cateories</li>
+        <ul className="filtercategory__ul">
+            <li className="filtercategory__li" onClick={() => handleCategory('all')}>All Cateories</li>
         {
             categories?.map(category => (
-                <li onClick={() => handleCategory(category.id)} key={category.id}>{category.name}</li>
+                <li className="filtercategory__li" onClick={() => handleCategory(category.id)} key={category.id}>{category.name}</li>
             ))
         }
         </ul>

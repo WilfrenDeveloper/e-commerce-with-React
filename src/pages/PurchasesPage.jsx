@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import useFetch from '../hooks/useFetch'
 import getTokenConfig from '../utils/getTokenConfig'
 import PurchasesCard from '../components/PurchasesPage/PurchasesCard'
+import '../components/PurchasesPage/styles/PurchasesPage.css'
 
 const PurchasesPage = () => {
 
@@ -12,9 +13,13 @@ const PurchasesPage = () => {
         getPurchases(url, getTokenConfig())
     }, [])
 
-
     return (
-        <div>
+        <section className='purchasespage'>
+            <div className="purchasespage__return">
+                <a href="/">Home</a>
+                <figure> </figure>
+                <p>Purchases</p>
+            </div>
             <h2>My Purchases</h2>
             <div>
                 {
@@ -26,7 +31,7 @@ const PurchasesPage = () => {
                     ))
                 }
             </div>
-        </div>
+        </section>
     )
 }
 

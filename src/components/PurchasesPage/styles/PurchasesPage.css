@@ -1,0 +1,32 @@
+.purchasespage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0
+}
+
+.purchasespage__return{
+    margin-left: 80px;
+    display: flex;
+    gap: 25px;
+    align-self: flex-start;
+}
+
+.purchasespage__return>a{
+    text-decoration: none;
+    color: var(--dark-gray);
+}
+
+.purchasespage__return>figure{
+    background-color: var(--primary);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: relative;
+    top: 5px;
+}
+
+.purchasespage__return>p{
+    font-weight: bold;
+}
