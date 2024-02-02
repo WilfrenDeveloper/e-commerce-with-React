@@ -15,7 +15,7 @@ const cartSlice = createSlice({
 export default cartSlice.reducer;
 export const { addToCart, removeFromCart, setCart } = cartSlice.actions;
 
-const baseUrl = 'http://localhost:8080/cart'
+const baseUrl = 'https://ecommerce-db-n5fd.onrender.com/cart'
 
 export const getCartThunk = () => (dispatch) => {
     const url = `${baseUrl}`

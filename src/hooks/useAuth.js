@@ -3,14 +3,14 @@ import axios from "axios"
 const useAuth = () => {
 
     const registerUser = (user) => {
-        const url = 'http://localhost:8080/users';
+        const url = 'https://ecommerce-db-n5fd.onrender.com/users';
         axios.post(url, user)
         .then(res => console.log(res.data))
         .catch(error => console.log(error))
     }
 
     const loginUser = (credentials) => {
-        const url = 'http://localhost:8080/users/login';
+        const url = 'https://ecommerce-db-n5fd.onrender.com/users/login';
         axios.post(url, credentials)
         .then(res => {
             console.log(res.data)

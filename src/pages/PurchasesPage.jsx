@@ -9,7 +9,7 @@ const PurchasesPage = () => {
     const [purchases, getPurchases] = useFetch()
 
     useEffect(() => {
-        const url = 'http://localhost:8080/purchases'
+        const url = 'https://ecommerce-db-n5fd.onrender.com/purchases'
         getPurchases(url, getTokenConfig())
     }, [])
 

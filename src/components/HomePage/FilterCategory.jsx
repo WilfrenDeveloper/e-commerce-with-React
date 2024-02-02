@@ -6,7 +6,7 @@ import './styles/FilterCategory.css'
 const FilterCategory = ({ setCategorySelected }) => {
     const [categories, getCategories] = useFetch()
 
-    const url = "http://localhost:8080/categories"
+    const url = "https://ecommerce-db-n5fd.onrender.com/categories"
 
     useEffect(() => {
       getCategories(url)
